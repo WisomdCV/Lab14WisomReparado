@@ -13,6 +13,11 @@
         android:theme="@style/Theme.Lab14WisomReparado"
         tools:targetApi="31">
 
+        <!-- Actividad WorkActivity con android:exported="true" -->
+        <activity
+            android:name=".WorkActivity"
+            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -24,8 +29,8 @@
             </intent-filter>
         </activity>
 
-        <!-- Widget Provider Registration -->
-        <receiver android:name=".SimpleWidget"
+        <receiver
+            android:name=".SimpleWidget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -34,7 +39,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/simple_widget_info" />
         </receiver>
-
     </application>
 
 </manifest>
